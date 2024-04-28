@@ -25,5 +25,8 @@ final class AppFlowCoordinator: FlowCoordinatorProtocol {
     }
 
     func start() {
+        let articleSceneDIContainer = appDIContainer.makeArticleSceneDIContainer()
+        let flow = articleSceneDIContainer.initArticleFlowCoordinator(navigationController: navigationController)
+        flow.start()
     }
 }

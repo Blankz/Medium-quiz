@@ -8,4 +8,7 @@
 import Foundation
 
 final class AppDIContainer {
+    func makeArticleSceneDIContainer() -> ArticleSceneDIContainer {
+        return ArticleSceneDIContainer()
+    }
 }

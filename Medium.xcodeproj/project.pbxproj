@@ -13,6 +13,11 @@
 		461D8D9B2BDD785E00EFA361 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 461D8D9A2BDD785E00EFA361 /* Base */; };
 		461D8DA52BDD799B00EFA361 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DA42BDD799B00EFA361 /* AppDIContainer.swift */; };
 		461D8DA72BDD79D000EFA361 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DA62BDD79D000EFA361 /* AppFlowCoordinator.swift */; };
+		461D8DAA2BDD7B3700EFA361 /* ArticleSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DA92BDD7B3700EFA361 /* ArticleSceneDIContainer.swift */; };
+		461D8DAF2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DAE2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift */; };
+		461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DB32BDD7D2100EFA361 /* ArticleListViewController.swift */; };
+		461D8DB62BDD7D2A00EFA361 /* ArticleListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461D8DB52BDD7D2A00EFA361 /* ArticleListViewController.storyboard */; };
+		461D8DB92BDD84FC00EFA361 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		461D8D9C2BDD785E00EFA361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		461D8DA42BDD799B00EFA361 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		461D8DA62BDD79D000EFA361 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		461D8DA92BDD7B3700EFA361 /* ArticleSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSceneDIContainer.swift; sourceTree = "<group>"; };
+		461D8DAE2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleFlowCoordinator.swift; sourceTree = "<group>"; };
+		461D8DB32BDD7D2100EFA361 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		461D8DB52BDD7D2A00EFA361 /* ArticleListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleListViewController.storyboard; sourceTree = "<group>"; };
+		461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				461D8DA22BDD789D00EFA361 /* Application */,
+				461D8DAB2BDD7C0200EFA361 /* Presentation */,
 				461D8DA32BDD78B300EFA361 /* Resource */,
 			);
 			path = Medium;
@@ -87,8 +98,76 @@
 			isa = PBXGroup;
 			children = (
 				461D8DA42BDD799B00EFA361 /* AppDIContainer.swift */,
+				461D8DA92BDD7B3700EFA361 /* ArticleSceneDIContainer.swift */,
 			);
 			path = DIContainter;
+			sourceTree = "<group>";
+		};
+		461D8DAB2BDD7C0200EFA361 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DAC2BDD7C0E00EFA361 /* ArticleScene */,
+				461D8DB72BDD84E100EFA361 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		461D8DAC2BDD7C0E00EFA361 /* ArticleScene */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DAD2BDD7C1D00EFA361 /* Flows */,
+				461D8DB02BDD7CEF00EFA361 /* ArticleList */,
+			);
+			path = ArticleScene;
+			sourceTree = "<group>";
+		};
+		461D8DAD2BDD7C1D00EFA361 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DAE2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		461D8DB02BDD7CEF00EFA361 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DB22BDD7D0D00EFA361 /* ViewModel */,
+				461D8DB12BDD7D0800EFA361 /* View */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		461D8DB12BDD7D0800EFA361 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DB32BDD7D2100EFA361 /* ArticleListViewController.swift */,
+				461D8DB52BDD7D2A00EFA361 /* ArticleListViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		461D8DB22BDD7D0D00EFA361 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		461D8DB72BDD84E100EFA361 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DBA2BDD84FF00EFA361 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		461D8DBA2BDD84FF00EFA361 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461D8DB62BDD7D2A00EFA361 /* ArticleListViewController.storyboard in Resources */,
 				461D8D982BDD785E00EFA361 /* Assets.xcassets in Resources */,
 				461D8D9B2BDD785E00EFA361 /* Base in Resources */,
 			);
@@ -162,9 +242,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				461D8DA72BDD79D000EFA361 /* AppFlowCoordinator.swift in Sources */,
+				461D8DAA2BDD7B3700EFA361 /* ArticleSceneDIContainer.swift in Sources */,
 				461D8D8F2BDD785D00EFA361 /* AppDelegate.swift in Sources */,
+				461D8DAF2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift in Sources */,
 				461D8D912BDD785D00EFA361 /* SceneDelegate.swift in Sources */,
 				461D8DA52BDD799B00EFA361 /* AppDIContainer.swift in Sources */,
+				461D8DB92BDD84FC00EFA361 /* StoryboardInstantiable.swift in Sources */,
+				461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
