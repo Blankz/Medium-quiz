@@ -8,12 +8,17 @@
 import UIKit
 
 class ArticleListViewController: UIViewController, StoryboardInstantiable {
+    private var viewModel: ArticleListViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    static func create() -> ArticleListViewController {
-        ArticleListViewController.instantiateViewController()
+    static func create(viewModel: ArticleListViewModel) -> ArticleListViewController {
+        let vc = ArticleListViewController.instantiateViewController()
+        vc.viewModel = viewModel
+        
+        return vc
     }
 }

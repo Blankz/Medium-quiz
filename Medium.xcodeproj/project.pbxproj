@@ -18,6 +18,21 @@
 		461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DB32BDD7D2100EFA361 /* ArticleListViewController.swift */; };
 		461D8DB62BDD7D2A00EFA361 /* ArticleListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461D8DB52BDD7D2A00EFA361 /* ArticleListViewController.storyboard */; };
 		461D8DB92BDD84FC00EFA361 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */; };
+		461D8DBC2BDE09EB00EFA361 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DBB2BDE09EB00EFA361 /* AppConfigurations.swift */; };
+		461D8DC02BDE0B5900EFA361 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DBF2BDE0B5900EFA361 /* DataTransferService.swift */; };
+		461D8DC22BDE0B9200EFA361 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DC12BDE0B9200EFA361 /* NetworkService.swift */; };
+		461D8DC42BDE0BFE00EFA361 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DC32BDE0BFE00EFA361 /* Endpoint.swift */; };
+		461D8DC62BDE0C1C00EFA361 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DC52BDE0C1C00EFA361 /* NetworkConfig.swift */; };
+		461D8DCB2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DCA2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift */; };
+		461D8DCE2BDE293600EFA361 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DCD2BDE293600EFA361 /* Cancellable.swift */; };
+		461D8DD22BDE2A0D00EFA361 /* ArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DD12BDE2A0D00EFA361 /* ArticleRepository.swift */; };
+		461D8DD52BDE2ADC00EFA361 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DD42BDE2ADC00EFA361 /* RepositoryTask.swift */; };
+		461D8DD82BDE2BC700EFA361 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DD72BDE2BC700EFA361 /* APIEndpoints.swift */; };
+		461D8DDC2BDE2C3200EFA361 /* ArticleListResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DDB2BDE2C3200EFA361 /* ArticleListResponseDTO+Mapping.swift */; };
+		461D8DDF2BDE2D3000EFA361 /* ArticleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DDE2BDE2D3000EFA361 /* ArticleEndpoint.swift */; };
+		461D8DE22BDE949E00EFA361 /* ArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE12BDE949E00EFA361 /* ArticleUseCase.swift */; };
+		461D8DE42BDE979500EFA361 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE32BDE979500EFA361 /* ArticleListViewModel.swift */; };
+		461D8DE62BDE99B600EFA361 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE52BDE99B600EFA361 /* DispatchQueueType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +49,21 @@
 		461D8DB32BDD7D2100EFA361 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		461D8DB52BDD7D2A00EFA361 /* ArticleListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleListViewController.storyboard; sourceTree = "<group>"; };
 		461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		461D8DBB2BDE09EB00EFA361 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		461D8DBF2BDE0B5900EFA361 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		461D8DC12BDE0B9200EFA361 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		461D8DC32BDE0BFE00EFA361 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		461D8DC52BDE0C1C00EFA361 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		461D8DCA2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepositoryProtocol.swift; sourceTree = "<group>"; };
+		461D8DCD2BDE293600EFA361 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		461D8DD12BDE2A0D00EFA361 /* ArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepository.swift; sourceTree = "<group>"; };
+		461D8DD42BDE2ADC00EFA361 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
+		461D8DD72BDE2BC700EFA361 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		461D8DDB2BDE2C3200EFA361 /* ArticleListResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleListResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		461D8DDE2BDE2D3000EFA361 /* ArticleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEndpoint.swift; sourceTree = "<group>"; };
+		461D8DE12BDE949E00EFA361 /* ArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleUseCase.swift; sourceTree = "<group>"; };
+		461D8DE32BDE979500EFA361 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		461D8DE52BDE99B600EFA361 /* DispatchQueueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				461D8DA22BDD789D00EFA361 /* Application */,
+				461D8DCC2BDE291900EFA361 /* Common */,
+				461D8DC72BDE0E5B00EFA361 /* Domain */,
+				461D8DCF2BDE29D300EFA361 /* Data */,
+				461D8DBD2BDE0B3500EFA361 /* Infrastructure */,
 				461D8DAB2BDD7C0200EFA361 /* Presentation */,
 				461D8DA32BDD78B300EFA361 /* Resource */,
 			);
@@ -76,6 +110,7 @@
 		461D8DA22BDD789D00EFA361 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				461D8DBB2BDE09EB00EFA361 /* AppConfigurations.swift */,
 				461D8D8E2BDD785D00EFA361 /* AppDelegate.swift */,
 				461D8DA62BDD79D000EFA361 /* AppFlowCoordinator.swift */,
 				461D8D902BDD785D00EFA361 /* SceneDelegate.swift */,
@@ -150,6 +185,7 @@
 		461D8DB22BDD7D0D00EFA361 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				461D8DE32BDE979500EFA361 /* ArticleListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +204,127 @@
 				461D8DB82BDD84FC00EFA361 /* StoryboardInstantiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		461D8DBD2BDE0B3500EFA361 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DBE2BDE0B3E00EFA361 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		461D8DBE2BDE0B3E00EFA361 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DBF2BDE0B5900EFA361 /* DataTransferService.swift */,
+				461D8DC12BDE0B9200EFA361 /* NetworkService.swift */,
+				461D8DC32BDE0BFE00EFA361 /* Endpoint.swift */,
+				461D8DC52BDE0C1C00EFA361 /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		461D8DC72BDE0E5B00EFA361 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DE02BDE946D00EFA361 /* UseCase */,
+				461D8DC82BDE0E7500EFA361 /* Interface */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		461D8DC82BDE0E7500EFA361 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DC92BDE0E7F00EFA361 /* Repositories */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		461D8DC92BDE0E7F00EFA361 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DCA2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		461D8DCC2BDE291900EFA361 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DCD2BDE293600EFA361 /* Cancellable.swift */,
+				461D8DE52BDE99B600EFA361 /* DispatchQueueType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		461D8DCF2BDE29D300EFA361 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DD62BDE2BAF00EFA361 /* Network */,
+				461D8DD02BDE29E300EFA361 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		461D8DD02BDE29E300EFA361 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DD32BDE2AC900EFA361 /* Utils */,
+				461D8DD12BDE2A0D00EFA361 /* ArticleRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		461D8DD32BDE2AC900EFA361 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DD42BDE2ADC00EFA361 /* RepositoryTask.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		461D8DD62BDE2BAF00EFA361 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DD72BDE2BC700EFA361 /* APIEndpoints.swift */,
+				461D8DDD2BDE2D1F00EFA361 /* Endpoints */,
+				461D8DD92BDE2C0800EFA361 /* DataMapping */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		461D8DD92BDE2C0800EFA361 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DDA2BDE2C1A00EFA361 /* ArticleList */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		461D8DDA2BDE2C1A00EFA361 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DDB2BDE2C3200EFA361 /* ArticleListResponseDTO+Mapping.swift */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		461D8DDD2BDE2D1F00EFA361 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DDE2BDE2D3000EFA361 /* ArticleEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		461D8DE02BDE946D00EFA361 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DE12BDE949E00EFA361 /* ArticleUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,13 +398,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461D8DCE2BDE293600EFA361 /* Cancellable.swift in Sources */,
+				461D8DC22BDE0B9200EFA361 /* NetworkService.swift in Sources */,
 				461D8DA72BDD79D000EFA361 /* AppFlowCoordinator.swift in Sources */,
+				461D8DE62BDE99B600EFA361 /* DispatchQueueType.swift in Sources */,
+				461D8DD82BDE2BC700EFA361 /* APIEndpoints.swift in Sources */,
+				461D8DC62BDE0C1C00EFA361 /* NetworkConfig.swift in Sources */,
 				461D8DAA2BDD7B3700EFA361 /* ArticleSceneDIContainer.swift in Sources */,
 				461D8D8F2BDD785D00EFA361 /* AppDelegate.swift in Sources */,
+				461D8DD22BDE2A0D00EFA361 /* ArticleRepository.swift in Sources */,
 				461D8DAF2BDD7C2E00EFA361 /* ArticleFlowCoordinator.swift in Sources */,
+				461D8DE42BDE979500EFA361 /* ArticleListViewModel.swift in Sources */,
+				461D8DC02BDE0B5900EFA361 /* DataTransferService.swift in Sources */,
+				461D8DDC2BDE2C3200EFA361 /* ArticleListResponseDTO+Mapping.swift in Sources */,
 				461D8D912BDD785D00EFA361 /* SceneDelegate.swift in Sources */,
+				461D8DD52BDE2ADC00EFA361 /* RepositoryTask.swift in Sources */,
+				461D8DE22BDE949E00EFA361 /* ArticleUseCase.swift in Sources */,
+				461D8DDF2BDE2D3000EFA361 /* ArticleEndpoint.swift in Sources */,
+				461D8DCB2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift in Sources */,
 				461D8DA52BDD799B00EFA361 /* AppDIContainer.swift in Sources */,
 				461D8DB92BDD84FC00EFA361 /* StoryboardInstantiable.swift in Sources */,
+				461D8DBC2BDE09EB00EFA361 /* AppConfigurations.swift in Sources */,
+				461D8DC42BDE0BFE00EFA361 /* Endpoint.swift in Sources */,
 				461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
