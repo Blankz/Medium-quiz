@@ -33,6 +33,9 @@
 		461D8DE22BDE949E00EFA361 /* ArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE12BDE949E00EFA361 /* ArticleUseCase.swift */; };
 		461D8DE42BDE979500EFA361 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE32BDE979500EFA361 /* ArticleListViewModel.swift */; };
 		461D8DE62BDE99B600EFA361 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DE52BDE99B600EFA361 /* DispatchQueueType.swift */; };
+		461D8DE92BDEA99100EFA361 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 461D8DE82BDEA99100EFA361 /* XMLCoder */; };
+		461D8DEC2BDEADA300EFA361 /* ArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DEB2BDEADA300EFA361 /* ArticleItem.swift */; };
+		461D8DEE2BDEB41A00EFA361 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DED2BDEB41A00EFA361 /* ArticleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,8 @@
 		461D8DE12BDE949E00EFA361 /* ArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleUseCase.swift; sourceTree = "<group>"; };
 		461D8DE32BDE979500EFA361 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		461D8DE52BDE99B600EFA361 /* DispatchQueueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
+		461D8DEB2BDEADA300EFA361 /* ArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItem.swift; sourceTree = "<group>"; };
+		461D8DED2BDEB41A00EFA361 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461D8DE92BDEA99100EFA361 /* XMLCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +234,7 @@
 		461D8DC72BDE0E5B00EFA361 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				461D8DEA2BDEAD8B00EFA361 /* Entities */,
 				461D8DE02BDE946D00EFA361 /* UseCase */,
 				461D8DC82BDE0E7500EFA361 /* Interface */,
 			);
@@ -327,6 +334,15 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		461D8DEA2BDEAD8B00EFA361 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				461D8DEB2BDEADA300EFA361 /* ArticleItem.swift */,
+				461D8DED2BDEB41A00EFA361 /* ArticleList.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +359,9 @@
 			dependencies = (
 			);
 			name = Medium;
+			packageProductDependencies = (
+				461D8DE82BDEA99100EFA361 /* XMLCoder */,
+			);
 			productName = Medium;
 			productReference = 461D8D8B2BDD785D00EFA361 /* Medium.app */;
 			productType = "com.apple.product-type.application";
@@ -371,6 +390,9 @@
 				Base,
 			);
 			mainGroup = 461D8D822BDD785D00EFA361;
+			packageReferences = (
+				461D8DE72BDEA99100EFA361 /* XCRemoteSwiftPackageReference "XMLCoder" */,
+			);
 			productRefGroup = 461D8D8C2BDD785D00EFA361 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -417,10 +439,12 @@
 				461D8DDF2BDE2D3000EFA361 /* ArticleEndpoint.swift in Sources */,
 				461D8DCB2BDE0E9D00EFA361 /* ArticleRepositoryProtocol.swift in Sources */,
 				461D8DA52BDD799B00EFA361 /* AppDIContainer.swift in Sources */,
+				461D8DEE2BDEB41A00EFA361 /* ArticleList.swift in Sources */,
 				461D8DB92BDD84FC00EFA361 /* StoryboardInstantiable.swift in Sources */,
 				461D8DBC2BDE09EB00EFA361 /* AppConfigurations.swift in Sources */,
 				461D8DC42BDE0BFE00EFA361 /* Endpoint.swift in Sources */,
 				461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */,
+				461D8DEC2BDEADA300EFA361 /* ArticleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +659,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		461D8DE72BDEA99100EFA361 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.17.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		461D8DE82BDEA99100EFA361 /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 461D8DE72BDEA99100EFA361 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 461D8D832BDD785D00EFA361 /* Project object */;
 }

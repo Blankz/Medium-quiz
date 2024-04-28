@@ -8,7 +8,6 @@
 import Foundation
 
 final class ArticleRepository: ArticleRepositoryProtocol {
-    
     private let dataTransferService: DataTransferService
     //    private let cache: MoviesResponseStorage
     private let backgroundQueue: DataTransferDispatchQueue
@@ -24,36 +23,30 @@ final class ArticleRepository: ArticleRepositoryProtocol {
     }
     
     func fetchArticleList(
-        //        query: MovieQuery,
-        //        page: Int,
         //        cached: @escaping (MoviesPage) -> Void,
-        //        completion: @escaping (Result<MoviesPage, Error>) -> Void
+        completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable? {
-        
-        //        let requestDTO = MoviesRequestDTO(query: query.query, page: page)
         let task = RepositoryTask()
         
-        ////        cache.getResponse(for: requestDTO) { [weak self, backgroundQueue] result in
+        //        cache.getResponse(for: requestDTO) { [weak self, backgroundQueue] result in
         //
-        ////            if case let .success(responseDTO?) = result {
-        ////                cached(responseDTO.toDomain())
-        ////            }
-        ////            guard !task.isCancelled else { return }
+        //            if case let .success(responseDTO?) = result {
+        //                cached(responseDTO.toDomain())
+        //            }
+        //            guard !task.isCancelled else { return }
         //
         let endpoint = APIEndpoints.article.getArticleList.endpoint()
         task.networkTask = self.dataTransferService.request(
             with: endpoint,
             on: backgroundQueue
         ) { result in
+            print(result)
             switch result {
             case .success(let responseDTO):
-                print(result)
-                break
                 //                    self?.cache.save(response: responseDTO, for: requestDTO)
-                //                    completion(.success(responseDTO.toDomain()))
+                completion(.success(responseDTO.toModel()))
             case .failure(let error):
-                break
-                //                    completion(.failure(error))
+                completion(.failure(error))
             }
         }
         

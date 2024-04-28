@@ -12,7 +12,7 @@ class ArticleListViewController: UIViewController, StoryboardInstantiable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel.viewDidLoad()
     }
     
     static func create(viewModel: ArticleListViewModel) -> ArticleListViewController {

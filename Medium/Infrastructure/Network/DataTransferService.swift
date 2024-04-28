@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import XMLCoder
 
 enum DataTransferError: Error {
     case noResponse
@@ -90,7 +91,6 @@ extension DefaultDataTransferService: DataTransferService {
         on queue: DataTransferDispatchQueue,
         completion: @escaping CompletionHandler<T>
     ) -> NetworkCancellable? where E.Response == T {
-
         networkService.request(endpoint: endpoint) { result in
             switch result {
             case .success(let data):
@@ -180,29 +180,11 @@ class DefaultDataTransferErrorResolver: DataTransferErrorResolver {
 }
 
 // MARK: - Response Decoders
-class JSONResponseDecoder: ResponseDecoder {
-    private let jsonDecoder = JSONDecoder()
+class XMLResponseDecoder: ResponseDecoder {
+    private let xmlDecoder = XMLDecoder()
     init() { }
-    func decode<T: Decodable>(_ data: Data) throws -> T {
-        return try jsonDecoder.decode(T.self, from: data)
-    }
-}
 
-class RawDataResponseDecoder: ResponseDecoder {
-    init() { }
-    
-    enum CodingKeys: String, CodingKey {
-        case `default` = ""
-    }
     func decode<T: Decodable>(_ data: Data) throws -> T {
-        if T.self is Data.Type, let data = data as? T {
-            return data
-        } else {
-            let context = DecodingError.Context(
-                codingPath: [CodingKeys.default],
-                debugDescription: "Expected Data type"
-            )
-            throw Swift.DecodingError.typeMismatch(T.self, context)
-        }
+        return try xmlDecoder.decode(T.self, from: data)
     }
 }

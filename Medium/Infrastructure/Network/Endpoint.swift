@@ -40,7 +40,7 @@ class Endpoint<R>: ResponseRequestable {
          bodyParametersEncodable: Encodable? = nil,
          bodyParameters: [String: Any] = [:],
          bodyEncoder: BodyEncoder = JSONBodyEncoder(),
-         responseDecoder: ResponseDecoder = JSONResponseDecoder()) {
+         responseDecoder: ResponseDecoder = XMLResponseDecoder()) {
         self.path = path
         self.isFullPath = isFullPath
         self.method = method

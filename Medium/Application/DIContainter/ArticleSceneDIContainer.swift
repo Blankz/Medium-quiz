@@ -39,7 +39,6 @@ class ArticleSceneDIContainer: ArticleFlowCoordinatorProtocol {
     func initArticleListViewModel() -> ArticleListViewModel {
         ArticleListViewModel(
             articleUseCase: initArticleUseCase()
-//            actions: actions
         )
     }
     

@@ -8,10 +8,9 @@
 import Foundation
 
 protocol ArticleUseCaseProtocol {
-    func execute(
-        //        requestValue: SearchMoviesUseCaseRequestValue,
-        //        cached: @escaping (MoviesPage) -> Void,
-        //        completion: @escaping (Result<MoviesPage, Error>) -> Void
+    func fetchArticleList(
+        //        cached: @escaping (ArticleList) -> Void,
+        completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable?
 }
 
@@ -25,31 +24,17 @@ final class ArticleUseCase: ArticleUseCaseProtocol {
         //        moviesQueriesRepository: MoviesQueriesRepository
     ) {
         self.articleRepository = articleRepository
-//        self.moviesQueriesRepository = moviesQueriesRepository
+        //        self.moviesQueriesRepository = moviesQueriesRepository
     }
     
-    func execute(
-//        requestValue: SearchMoviesUseCaseRequestValue,
-//        cached: @escaping (MoviesPage) -> Void,
-//        completion: @escaping (Result<MoviesPage, Error>) -> Void
+    func fetchArticleList(
+        //        cached: @escaping (ArticleList) -> Void,
+        completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable? {
-        
-        return articleRepository.fetchArticleList()
-//            query: requestValue.query,
-//            page: requestValue.page,
-//            cached: cached,
-//            completion: { result in
-//                
-//                if case .success = result {
-//                    self.moviesQueriesRepository.saveRecentQuery(query: requestValue.query) { _ in }
-//                }
-//                
-//                completion(result)
-//            })
+        return articleRepository.fetchArticleList(
+            //            cached: cached,
+            completion: { result in
+                completion(result)
+            })
     }
 }
-
-//struct SearchMoviesUseCaseRequestValue {
-//    let query: MovieQuery
-//    let page: Int
-//}
