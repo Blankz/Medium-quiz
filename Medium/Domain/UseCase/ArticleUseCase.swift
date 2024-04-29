@@ -9,7 +9,7 @@ import Foundation
 
 protocol ArticleUseCaseProtocol {
     func fetchArticleList(
-        //        cached: @escaping (ArticleList) -> Void,
+        cached: @escaping (ArticleList) -> Void,
         completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable?
 }
@@ -17,22 +17,19 @@ protocol ArticleUseCaseProtocol {
 final class ArticleUseCase: ArticleUseCaseProtocol {
     
     private let articleRepository: ArticleRepository
-    //    private let moviesQueriesRepository: MoviesQueriesRepository
     
     init(
         articleRepository: ArticleRepository
-        //        moviesQueriesRepository: MoviesQueriesRepository
     ) {
         self.articleRepository = articleRepository
-        //        self.moviesQueriesRepository = moviesQueriesRepository
     }
     
     func fetchArticleList(
-        //        cached: @escaping (ArticleList) -> Void,
+        cached: @escaping (ArticleList) -> Void,
         completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable? {
         return articleRepository.fetchArticleList(
-            //            cached: cached,
+            cached: cached,
             completion: { result in
                 completion(result)
             })

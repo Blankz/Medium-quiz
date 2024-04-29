@@ -87,12 +87,12 @@ final class ArticleListViewModel: ArticleListViewModelInputProtocol & ArticleLis
         self.loading.value = true
         
         articleUseCase.fetchArticleList(
-            //            cached: { [weak self] page in
-            //                self?.mainQueue.async {
-            //                    self?.appendPage(page)
-            //            self?.loading.value = false
-            //                }
-            //            },
+            cached: { [weak self] article in
+                self?.mainQueue.async {
+                    self?.fetchArticleListSuccess(article)
+                    self?.loading.value = false
+                }
+            },
             completion: { [weak self] result in
                 self?.mainQueue.async {
                     switch result {

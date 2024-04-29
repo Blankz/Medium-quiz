@@ -41,6 +41,7 @@
 		461D8DF52BDF2BDA00EFA361 /* ArticleItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461D8DF42BDF2BDA00EFA361 /* ArticleItemTableViewCell.swift */; };
 		461D8DF72BDF2BEB00EFA361 /* ArticleItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 461D8DF62BDF2BEB00EFA361 /* ArticleItemTableViewCell.xib */; };
 		469B604A2BDFE54200FB6BB4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 469B60492BDFE54200FB6BB4 /* Kingfisher */; };
+		469B604D2BDFF12D00FB6BB4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469B604C2BDFF12D00FB6BB4 /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		461D8DF12BDEC58900EFA361 /* ArticleItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItemViewModel.swift; sourceTree = "<group>"; };
 		461D8DF42BDF2BDA00EFA361 /* ArticleItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItemTableViewCell.swift; sourceTree = "<group>"; };
 		461D8DF62BDF2BEB00EFA361 /* ArticleItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleItemTableViewCell.xib; sourceTree = "<group>"; };
+		469B604C2BDFF12D00FB6BB4 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 		461D8DCF2BDE29D300EFA361 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				469B604B2BDFF12100FB6BB4 /* Cache */,
 				461D8DD62BDE2BAF00EFA361 /* Network */,
 				461D8DD02BDE29E300EFA361 /* Repository */,
 			);
@@ -363,6 +366,14 @@
 				461D8DF62BDF2BEB00EFA361 /* ArticleItemTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		469B604B2BDFF12100FB6BB4 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				469B604C2BDFF12D00FB6BB4 /* Cache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +484,7 @@
 				461D8DC42BDE0BFE00EFA361 /* Endpoint.swift in Sources */,
 				461D8DB42BDD7D2100EFA361 /* ArticleListViewController.swift in Sources */,
 				461D8DEC2BDEADA300EFA361 /* ArticleItem.swift in Sources */,
+				469B604D2BDFF12D00FB6BB4 /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

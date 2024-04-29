@@ -10,7 +10,7 @@ import Foundation
 protocol ArticleRepositoryProtocol {
     @discardableResult
     func fetchArticleList(
-        //        cached: @escaping (MoviesPage) -> Void,
+        cached: @escaping (ArticleList) -> Void,
         completion: @escaping (Result<ArticleList, Error>) -> Void
     ) -> Cancellable?
 }

@@ -11,7 +11,7 @@ class ArticleSceneDIContainer: ArticleFlowCoordinatorProtocol {
     struct Dependencies {
         let apiDataTransferService: DataTransferService
     }
-    
+    lazy var cache: CacheDataProtocol = CacheData()
     private let dependencies: Dependencies
     
     init(dependencies: Dependencies) {
@@ -26,8 +26,8 @@ class ArticleSceneDIContainer: ArticleFlowCoordinatorProtocol {
     // MARK: - Repositories
     func initArticleRepository() -> ArticleRepository {
         ArticleRepository(
-            dataTransferService: dependencies.apiDataTransferService
-//            cache: moviesResponseCache
+            dataTransferService: dependencies.apiDataTransferService,
+            cache: cache
         )
     }
     

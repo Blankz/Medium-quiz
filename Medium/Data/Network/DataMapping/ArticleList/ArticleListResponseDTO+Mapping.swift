@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct ArticleResponseDTO: Decodable {
+struct ArticleResponseDTO: Codable {
     let channel: Channel
 }
 
 extension ArticleResponseDTO {
-    struct Channel: Decodable {
+    struct Channel: Codable {
         let title: String
         let description: String
         let image: Image
         let item: [ArticleItem]
         
-        struct Image: Decodable {
+        struct Image: Codable {
             let url: String
         }
         
-        struct ArticleItem: Decodable {
+        struct ArticleItem: Codable {
             private enum CodingKeys: String, CodingKey {
                 case title
                 case link
