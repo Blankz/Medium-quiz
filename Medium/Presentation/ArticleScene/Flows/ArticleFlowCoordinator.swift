@@ -8,7 +8,8 @@
 import UIKit
 
 protocol ArticleFlowCoordinatorProtocol  {
-    func initArticlesListViewController() -> ArticleListViewController
+    func initArticlesListViewController(actions: ArticleListViewModelActions) -> ArticleListViewController
+    func initArticlesDetailViewController(articleItem: ArticleItemViewModel) -> ArticleDetailViewController
 }
 
 class ArticleFlowCoordinator: FlowCoordinatorProtocol {
@@ -23,8 +24,16 @@ class ArticleFlowCoordinator: FlowCoordinatorProtocol {
     }
     
     func start() {
-        let vc = articleFlowProtocol.initArticlesListViewController()
+        let actions = ArticleListViewModelActions(showDetailPage: showDetailPage)
+        let vc = articleFlowProtocol.initArticlesListViewController(actions: actions)
 
         navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    private func showDetailPage(articleItem: ArticleItemViewModel) {
+        let vc = articleFlowProtocol.initArticlesDetailViewController(articleItem: articleItem
+        )
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

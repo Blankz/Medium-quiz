@@ -32,18 +32,28 @@ class ArticleSceneDIContainer: ArticleFlowCoordinatorProtocol {
     }
     
     // MARK: - Article List
-    func initArticlesListViewController() -> ArticleListViewController {
-        ArticleListViewController.create(viewModel: initArticleListViewModel())
+    func initArticlesListViewController(actions: ArticleListViewModelActions) -> ArticleListViewController {
+        ArticleListViewController.create(viewModel: initArticleListViewModel(actions: actions))
     }
     
-    func initArticleListViewModel() -> ArticleListViewModel {
+    func initArticleListViewModel(actions: ArticleListViewModelActions) -> ArticleListViewModel {
         ArticleListViewModel(
-            articleUseCase: initArticleUseCase()
+            articleUseCase: initArticleUseCase(),
+            actions: actions
         )
     }
     
     func initArticleFlowCoordinator(navigationController: UINavigationController) -> ArticleFlowCoordinator {
         ArticleFlowCoordinator(navigationController: navigationController,
                                articleFlowProtocol: self)
+    }
+    
+    // MARK: - Article Detail
+    func initArticlesDetailViewController(articleItem: ArticleItemViewModel) -> ArticleDetailViewController {
+        ArticleDetailViewController.create(viewModel: initArticleDetailViewModel(articleItem: articleItem))
+    }
+    
+    func initArticleDetailViewModel(articleItem: ArticleItemViewModel) -> ArticleDetailViewModel {
+        ArticleDetailViewModel(articleItem: articleItem)
     }
 }

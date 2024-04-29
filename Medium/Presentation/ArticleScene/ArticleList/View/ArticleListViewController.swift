@@ -30,8 +30,6 @@ class ArticleListViewController: UIViewController, StoryboardInstantiable {
     private func bind(to viewModel: ArticleListViewModel) {
         viewModel.isReloadView.observe(on: self) { [weak self] _ in self?.updateItems() }
         viewModel.loading.observe(on: self) { [weak self] in self?.updateLoading($0) }
-        //        viewModel.query.observe(on: self) { [weak self] in self?.updateSearchQuery($0) }
-        //        viewModel.error.observe(on: self) { [weak self] in self?.showError($0) }
     }
     
     private func updateLoading(_ loading: Bool) {
@@ -76,5 +74,9 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource 
         cell.viewModel = viewModel.cellForRowAt(indexPath: indexPath)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectItem(at: indexPath.row)
     }
 }
