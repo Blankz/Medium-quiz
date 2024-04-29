@@ -40,7 +40,6 @@ final class ArticleRepository: ArticleRepositoryProtocol {
             with: endpoint,
             on: backgroundQueue
         ) { result in
-            print(result)
             switch result {
             case .success(let responseDTO):
                 //                    self?.cache.save(response: responseDTO, for: requestDTO)

@@ -10,4 +10,8 @@ import Foundation
 struct ArticleItem {
     let title: String
     let link: String
+    let creator: String
+    let creatorIcon: String
+    let content: String
+    let publishDate: Date?
 }

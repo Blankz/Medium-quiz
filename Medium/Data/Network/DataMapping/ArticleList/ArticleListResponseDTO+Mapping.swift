@@ -15,11 +15,27 @@ extension ArticleResponseDTO {
     struct Channel: Decodable {
         let title: String
         let description: String
+        let image: Image
         let item: [ArticleItem]
         
+        struct Image: Decodable {
+            let url: String
+        }
+        
         struct ArticleItem: Decodable {
+            private enum CodingKeys: String, CodingKey {
+                case title
+                case link
+                case content = "content:encoded"
+                case creator = "dc:creator"
+                case publishDate = "atom:updated"
+            }
+            
             let title: String
             let link: String
+            let creator: String
+            let content: String
+            let publishDate: String
         }
     }
 }
@@ -28,13 +44,20 @@ extension ArticleResponseDTO {
 extension ArticleResponseDTO {
     func toModel() -> ArticleList {
         return ArticleList(title: channel.title,
-                           items: channel.item.map { $0.toModel() })
+                           items: channel.item.map { $0.toModel(creatorIcon: channel.image.url) })
     }
 }
 
 extension ArticleResponseDTO.Channel.ArticleItem {
-    func toModel() -> ArticleItem {
-        return ArticleItem(title: title, link: link)
+    func toModel(creatorIcon: String) -> ArticleItem {
+        let dateFormatter = ISO8601DateFormatter()
+        dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+
+        return ArticleItem(title: title,
+                           link: link,
+                           creator: creator,
+                           creatorIcon: creatorIcon,
+                           content: content,
+                           publishDate: dateFormatter.date(from: publishDate))
     }
 }
-

@@ -9,17 +9,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Article List View Controller-->
+        <!--Medium-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ArticleListViewController" customModule="Medium" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WOb-OS-oNi">
+                                <rect key="frame" x="186.66666666666666" y="450.66666666666669" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0OR-fo-rZP">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WOb-OS-oNi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="FBK-cY-8uM"/>
+                            <constraint firstAttribute="bottom" secondItem="0OR-fo-rZP" secondAttribute="bottom" id="S39-fR-kDv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0OR-fo-rZP" secondAttribute="trailing" id="Zaw-Yz-EOy"/>
+                            <constraint firstItem="0OR-fo-rZP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="i2X-mi-fNi"/>
+                            <constraint firstItem="WOb-OS-oNi" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="yXt-9k-lub"/>
+                            <constraint firstItem="0OR-fo-rZP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zxm-1d-sZb"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hKM-li-dJ9"/>
+                    <navigationItem key="navigationItem" title="Medium" id="hKM-li-dJ9"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="WOb-OS-oNi" id="o9f-Nk-Aoe"/>
+                        <outlet property="tableView" destination="0OR-fo-rZP" id="Sxd-7M-M4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
